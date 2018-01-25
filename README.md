@@ -1,2 +1,2 @@
-# Cucumber Test Automation Framework
-Gherkin language, feature file, HTML report generating, Data Driven, Jenkins integration
+# Cucumber Test Automation Framework Using Excel (BDD)
+Java Selenium, Gherkin language, Features file, HTML report generating, Data Driven, Jenkins integration
