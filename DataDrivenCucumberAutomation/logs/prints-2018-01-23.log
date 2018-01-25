@@ -1,0 +1,6 @@
+23:00:30.385 [main] INFO  initializeDriver.InitializeWebDriver - Initializing the diver
+23:00:39.013 [main] INFO  initializeDriver.InitializeWebDriver - Clicked Contact Us
+23:00:39.242 [main] INFO  initializeDriver.InitializeWebDriver - Entered email:jay@yahoo.com
+23:00:39.298 [main] INFO  initializeDriver.InitializeWebDriver - Entered email:null
+23:00:39.403 [main] INFO  initializeDriver.InitializeWebDriver - Entered email:DataSet3
+23:00:40.334 [main] INFO  initializeDriver.InitializeWebDriver - Initializing the diver

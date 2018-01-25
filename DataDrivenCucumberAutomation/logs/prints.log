@@ -1,0 +1,4 @@
+23:00:48.358 [main] INFO  initializeDriver.InitializeWebDriver - Clicked Contact Us
+23:00:48.625 [main] INFO  initializeDriver.InitializeWebDriver - Entered email:gilby@jay.com
+23:00:48.695 [main] INFO  initializeDriver.InitializeWebDriver - Entered email:null
+23:00:48.748 [main] INFO  initializeDriver.InitializeWebDriver - Entered email:DataSet4
