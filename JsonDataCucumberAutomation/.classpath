@@ -23,5 +23,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/I350380/Documents/GitHub/Cucumber-Test-Automation-Framework/JsonDataCucumberAutomation/mysql-connector-jars/mysql-connector-java-5.1.47.jar"/>
+	<classpathentry kind="lib" path="C:/Users/I350380/Documents/GitHub/Cucumber-Test-Automation-Framework/JsonDataCucumberAutomation/mysql-connector-jars/mysql-connector-java-5.1.47-bin.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -33,7 +33,7 @@ public class JSONFrameWorkExample
     public void i_create_json_string_from_object_and_write_to_file () throws Throwable
     {
         SerialiseDeserialiseJson.serializeJsonData();
-        SerialiseDeserialiseJson.serializeEmployeeJsonData();
+        SerialiseDeserialiseJson.serializeEmployeeJsonDataFromDB();
     }
 
     @When("^I read json string from a file$")
@@ -71,27 +71,36 @@ public class JSONFrameWorkExample
         JsonParser parser = new JsonParser();
         JsonObject myobject = (JsonObject)parser.parse(jsonEmployee);
         JsonArray myarray = myobject.get("emp").getAsJsonArray();
-        JsonObject obj = myarray.get(1).getAsJsonObject();
-        InitializeWebDriver.getDriver().findElement(By.name("firstname")).sendKeys(
-            obj.get("firstName").getAsString());
-        InitializeWebDriver.getDriver().findElement(By.name("lastname")).sendKeys(
-            obj.get("lastName").getAsString());
-        InitializeWebDriver.getDriver().findElement(By.id("sex-1")).click();
-        InitializeWebDriver.getDriver().findElement(By.id("exp-2")).click();
-        InitializeWebDriver.getDriver().findElement(By.id("datepicker")).sendKeys(
-            obj.get("date_stopped").getAsString());
-        InitializeWebDriver.getDriver().findElement(By.id("tea3")).click();
-        InitializeWebDriver.getDriver().findElement(By.id("tool-1")).click();
-        Select continents_select =
-            new Select(InitializeWebDriver.getDriver().findElement(By.id("continents")));
-        continents_select.selectByVisibleText(obj.get("continent").getAsString());
-        Select another_select_list =
-            new Select(
-                InitializeWebDriver.getDriver().findElement(By.id("selenium_commands")));
-        another_select_list.selectByVisibleText(
-            obj.get("selenium_commands").getAsString());
-        InitializeWebDriver.getDriver().findElement(By.id("submit")).click();
-        AssertJUnit.assertEquals("Welcome", InitializeWebDriver.getDriver().getTitle());
+        int arraysize = myarray.size();
+        
+        for (int i = 0; i < arraysize; i++) {
+          //get the 2nd item from jason array
+            JsonObject obj = myarray.get(i).getAsJsonObject();
+            
+            InitializeWebDriver.getDriver().findElement(By.name("firstname")).sendKeys(
+                obj.get("firstName").getAsString());
+            InitializeWebDriver.getDriver().findElement(By.name("lastname")).sendKeys(
+                obj.get("lastName").getAsString());
+            InitializeWebDriver.getDriver().findElement(By.id("sex-1")).click();
+            InitializeWebDriver.getDriver().findElement(By.id("exp-2")).click();
+            InitializeWebDriver.getDriver().findElement(By.id("datepicker")).sendKeys(
+                obj.get("date_stopped").getAsString());
+            InitializeWebDriver.getDriver().findElement(By.id("tea3")).click();
+            InitializeWebDriver.getDriver().findElement(By.id("tool-1")).click();
+            Select continents_select =
+                new Select(InitializeWebDriver.getDriver().findElement(By.id("continents")));
+            continents_select.selectByVisibleText(obj.get("continent").getAsString());
+            Select another_select_list =
+                new Select(
+                    InitializeWebDriver.getDriver().findElement(By.id("selenium_commands")));
+            another_select_list.selectByVisibleText(
+                obj.get("selenium_commands").getAsString());
+            InitializeWebDriver.getDriver().findElement(By.id("submit")).click();
+            AssertJUnit.assertEquals("Welcome", InitializeWebDriver.getDriver().getTitle()); 
+            
+            i_open_practiceselenium_website ();
+        }       
+        
     }
 
     @Then("^I close the browser$")

@@ -6,6 +6,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,9 +20,11 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import DBconnection.JDBConn;
 import ie.employee.data.Company;
 import ie.employee.data.Employee;
 import ie.employee.data.Person;
+
 
 /**
  * Hello world!
@@ -26,12 +33,14 @@ public class SerialiseDeserialiseJson
 {
     private static String jsonPerson;
     private static String jsonEmployee;
+    static List<Employee> emp;
 
     public static void main (String[] args)
     {
 
         try {
-            serializeEmployeeJsonData();
+           // serializeEmployeeJsonData();
+            serializeEmployeeJsonDataFromDB();
             deserializeEmployeeJsonData();
         }
         catch (IOException e) {
@@ -39,11 +48,38 @@ public class SerialiseDeserialiseJson
             e.printStackTrace();
         }
     }
+    
+    public static void serializeEmployeeJsonDataFromDB () throws IOException
+    {
+        JDBConn conn = new JDBConn();
+        emp = conn.getDBData();
+       
+        //add to comp and create a json output file -- serializing "outputEmployee.json"
+        Company comEmpl = new Company(emp);
+
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        FileOutputStream out = new FileOutputStream("outputEmployee.json");
+        out.write(gson.toJson(comEmpl).getBytes());
+        out.flush();
+        out.close();
+        
+        for (Employee employee : emp) {
+            System.out.println("First Name:" +employee.getFirstName() );
+            System.out.println("Last Name:" + employee.getLastName());
+            System.out.println("Sex:" +employee.getSex() );
+            System.out.println("Date:" + employee.getDate_stopped());
+            System.out.println("Tea:" +employee.getTea() );
+            System.out.println("Excited:" + employee.getExcited_about());
+            System.out.println("Continent:" +employee.getContinent());
+            System.out.println("Commands:" + employee.getSelenium_commands());
+        }
+        
+    }
 
     public static void serializeEmployeeJsonData () throws IOException
     {
 
-        List<Employee> emp = new ArrayList<Employee>();
+        emp = new ArrayList<Employee>();
         emp.add(new Employee(
             "James",
             "Joel",
@@ -83,7 +119,7 @@ public class SerialiseDeserialiseJson
         out.flush();
         out.close();
     }
-
+// reading the created json file -- deserialization of "outputEmployee.json"
     public static void deserializeEmployeeJsonData () throws IOException
     {
         FileInputStream fin = new FileInputStream(new File("outputEmployee.json"));

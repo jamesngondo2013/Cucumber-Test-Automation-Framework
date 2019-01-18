@@ -18,7 +18,7 @@ public class SmokeTest
     public void open_firefox_and_start_application () throws Throwable
     {
         System.setProperty("webdriver.chrome.driver",
-            "C:/Users/c5261355/Documents/chromedriver/chromedriver.exe");
+            "C:/chromedriver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://www.facecbook.com");
         driver.manage().window().maximize();

@@ -27,7 +27,7 @@ public class InitializeWebDriver
     {
         System.out.println("Called openBrowser");
         System.setProperty("webdriver.chrome.driver",
-            "C:/Users/c5261355/Documents/chromedriver/chromedriver.exe");
+            "C:/chromedriver/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
