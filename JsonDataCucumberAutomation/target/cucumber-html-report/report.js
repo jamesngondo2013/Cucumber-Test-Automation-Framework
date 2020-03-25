@@ -34,14 +34,14 @@ formatter.match({
   "location": "JSONFrameWorkExample.i_create_json_string_from_object_and_write_to_file()"
 });
 formatter.result({
-  "duration": 703525511,
+  "duration": 583650200,
   "status": "passed"
 });
 formatter.match({
   "location": "JSONFrameWorkExample.i_print_it_as_a_string()"
 });
 formatter.result({
-  "duration": 26190,
+  "duration": 31900,
   "status": "passed"
 });
 formatter.scenario({
@@ -61,7 +61,7 @@ formatter.match({
   "location": "JSONFrameWorkExample.i_read_json_string_from_a_file()"
 });
 formatter.result({
-  "duration": 7424196,
+  "duration": 6688100,
   "status": "passed"
 });
 formatter.scenario({
@@ -102,7 +102,7 @@ formatter.match({
   "location": "JSONFrameWorkExample.i_open_practiceselenium_website()"
 });
 formatter.result({
-  "duration": 14427531357,
+  "duration": 15186101100,
   "status": "passed"
 });
 formatter.match({
@@ -115,21 +115,21 @@ formatter.match({
   "location": "JSONFrameWorkExample.i_read_the_json_data_file(String)"
 });
 formatter.result({
-  "duration": 8219457,
+  "duration": 2463400,
   "status": "passed"
 });
 formatter.match({
   "location": "JSONFrameWorkExample.i_fill_the_form_with_data_from_json_and_submit()"
 });
 formatter.result({
-  "duration": 115325059609,
-  "error_message": "org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Navigation Commands)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.7.1\u0027, revision: \u00278a0099a\u0027, time: \u00272017-11-06T21:01:39.354Z\u0027\nSystem info: host: \u0027DUBN33945389A\u0027, ip: \u0027192.168.178.20\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_162\u0027\nDriver info: driver.version: unknown\r\n\tat org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)\r\n\tat stepDefinition.JSONFrameWorkExample.i_fill_the_form_with_data_from_json_and_submit(JSONFrameWorkExample.java:96)\r\n\tat ✽.And I fill the form with data from json and submit(JSONCucumberDataDriven.feature:16)\r\n",
-  "status": "failed"
+  "duration": 87142824300,
+  "status": "passed"
 });
 formatter.match({
   "location": "JSONFrameWorkExample.i_close_the_browser()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 1012870300,
+  "status": "passed"
 });
 });

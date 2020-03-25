@@ -20,7 +20,7 @@ public class JDBConn {
        
         try {
             con = (Connection)DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/automation", "root", "chingotah1980");
+                "jdbc:mysql://localhost:3306/automation?useSSL=false&amp", "root", "chingotah9070");
             
             if (con!=null) {
                 System.out.println("connected successfully...");
