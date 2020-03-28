@@ -19,37 +19,11 @@ import initializeWebDriver.InitializeWebDriver;
 /**
  * @author james.ngondo
  */
-public class JSONFrameWorkExample
+public class AccessJsonDataFileAndFillWebFormStepDifinition
 {
     public String json;
     public String jsonEmployee;
 
-    public JSONFrameWorkExample ()
-    {
-
-    }
-
-    @When("^I create json string from object and write to file$")
-    public void i_create_json_string_from_object_and_write_to_file () throws Throwable
-    {
-        SerialiseDeserialiseJson.serializeJsonData();
-        SerialiseDeserialiseJson.serializeEmployeeJsonDataFromDB();
-    }
-
-    @When("^I read json string from a file$")
-    public void i_read_json_string_from_a_file () throws Throwable
-    {
-        SerialiseDeserialiseJson.deserializeJsonData();
-        SerialiseDeserialiseJson.deserializeEmployeeJsonData();
-
-    }
-
-    @Then("^I print it as a string$")
-    public void i_print_it_as_a_string () throws Throwable
-    {
-        json = SerialiseDeserialiseJson.getJsonString();
-        jsonEmployee = SerialiseDeserialiseJson.getJsonEmployeeString();
-    }
 
     @When("^I open practiceselenium website$")
     public void i_open_practiceselenium_website () throws Throwable
@@ -58,11 +32,11 @@ public class JSONFrameWorkExample
         InitializeWebDriver.getDriver().get(
             "http://www.practiceselenium.com/practice-form.html");
     }
-
-    @When("^I read the json data file \"(.*?)\"$")
-    public void i_read_the_json_data_file (String arg1) throws Throwable
-    {
-        jsonEmployee = SerialiseDeserialiseJson.getJsonEmployeeString();
+    
+    @When("^I read the employee json data file \"(.*?)\"$")
+    public void i_read_the_employee_json_data_file(String arg1) throws Throwable {
+    	
+    	 jsonEmployee = SerialiseDeserialiseJson.getJsonEmployeeString();
     }
 
     @When("^I fill the form with data from json and submit$")

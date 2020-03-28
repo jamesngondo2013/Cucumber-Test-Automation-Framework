@@ -13,7 +13,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
-  "line": 6,
+  "line": 7,
   "name": "Serialization , convert object to json and print its string value",
   "description": "",
   "id": "demonstrate-the-json-data-formats;serialization-,-convert-object-to-json-and-print-its-string-value",
@@ -21,31 +21,31 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 7,
+  "line": 8,
   "name": "I create json string from object and write to file",
   "keyword": "When "
 });
 formatter.step({
-  "line": 8,
+  "line": 9,
   "name": "I print it as a string",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "JSONFrameWorkExample.i_create_json_string_from_object_and_write_to_file()"
+  "location": "AccessJsonFileStepDefinition.i_create_json_string_from_object_and_write_to_file()"
 });
 formatter.result({
-  "duration": 583650200,
+  "duration": 247605400,
   "status": "passed"
 });
 formatter.match({
-  "location": "JSONFrameWorkExample.i_print_it_as_a_string()"
+  "location": "AccessJsonFileStepDefinition.i_print_it_as_a_string()"
 });
 formatter.result({
-  "duration": 31900,
+  "duration": 119900,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 9,
+  "line": 11,
   "name": "Access a json string in a file",
   "description": "",
   "id": "demonstrate-the-json-data-formats;access-a-json-string-in-a-file",
@@ -53,19 +53,63 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 10,
+  "line": 12,
   "name": "I read json string from a file",
   "keyword": "When "
 });
 formatter.match({
-  "location": "JSONFrameWorkExample.i_read_json_string_from_a_file()"
+  "location": "AccessJsonFileStepDefinition.i_read_json_string_from_a_file()"
 });
 formatter.result({
-  "duration": 6688100,
+  "duration": 7468700,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 13,
+  "line": 14,
+  "name": "Serialize DB employee Object to Json",
+  "description": "",
+  "id": "demonstrate-the-json-data-formats;serialize-db-employee-object-to-json",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 15,
+  "name": "I serialize database employee object to json",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 16,
+  "name": "I read the employee json file",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 17,
+  "name": "I verify that the objects are serialized properly",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SerializeEmployeeJsonDataFromDB.i_serialize_database_employee_object_to_json()"
+});
+formatter.result({
+  "duration": 301921500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SerializeEmployeeJsonDataFromDB.i_read_the_employee_json_file()"
+});
+formatter.result({
+  "duration": 27500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SerializeEmployeeJsonDataFromDB.i_verify_that_the_objects_are_serialized_properly()"
+});
+formatter.result({
+  "duration": 23500,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 20,
   "name": "Accessing a json data file and filling the web form",
   "description": "",
   "id": "demonstrate-the-json-data-formats;accessing-a-json-data-file-and-filling-the-web-form",
@@ -73,63 +117,63 @@ formatter.scenario({
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 12,
+      "line": 19,
       "name": "@web"
     }
   ]
 });
 formatter.step({
-  "line": 14,
+  "line": 21,
   "name": "I open practiceselenium website",
   "keyword": "When "
 });
 formatter.step({
-  "line": 15,
-  "name": "I read the json data file \"outputEmployee.json\"",
+  "line": 22,
+  "name": "I read the employee json data file \"outputEmployee.json\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 16,
+  "line": 23,
   "name": "I fill the form with data from json and submit",
   "keyword": "And "
 });
 formatter.step({
-  "line": 17,
+  "line": 24,
   "name": "I close the browser",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "JSONFrameWorkExample.i_open_practiceselenium_website()"
+  "location": "AccessJsonDataFileAndFillWebFormStepDifinition.i_open_practiceselenium_website()"
 });
 formatter.result({
-  "duration": 15186101100,
+  "duration": 21337322700,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "outputEmployee.json",
-      "offset": 27
+      "offset": 36
     }
   ],
-  "location": "JSONFrameWorkExample.i_read_the_json_data_file(String)"
+  "location": "AccessJsonDataFileAndFillWebFormStepDifinition.i_read_the_employee_json_data_file(String)"
 });
 formatter.result({
-  "duration": 2463400,
+  "duration": 3828200,
   "status": "passed"
 });
 formatter.match({
-  "location": "JSONFrameWorkExample.i_fill_the_form_with_data_from_json_and_submit()"
+  "location": "AccessJsonDataFileAndFillWebFormStepDifinition.i_fill_the_form_with_data_from_json_and_submit()"
 });
 formatter.result({
-  "duration": 87142824300,
+  "duration": 137214325300,
   "status": "passed"
 });
 formatter.match({
-  "location": "JSONFrameWorkExample.i_close_the_browser()"
+  "location": "AccessJsonDataFileAndFillWebFormStepDifinition.i_close_the_browser()"
 });
 formatter.result({
-  "duration": 1012870300,
+  "duration": 1001472000,
   "status": "passed"
 });
 });

@@ -5,13 +5,15 @@ import java.util.List;
 public class Company
 {
 
+	private List<Employee> emp;
+	  
     public Company (List<Employee> emp)
     {
         super();
         this.emp = emp;
     }
 
-    private List<Employee> emp;
+  
 
     public Company ()
     {
