@@ -1,0 +1,38 @@
+[ 
+ {
+ "firstName": "James",
+ "lastName": "Ngondo",
+ "age": 35,
+ "emailAddress": "jayay@Gmail.com",
+ "address": {
+ "streetAddress": "Kill Bagh",
+ "city": "Dublin",
+ "postCode": "D14 AH39",
+ "state": "Dublin",
+ "country": "Ireland",
+ "county": "D"
+ },
+ "phoneNumber": {
+ "home": "012345678",
+ "mob": "0987654321"
+ }
+ },
+ {
+ "firstName": "Gilby",
+ "lastName": "Gombe",
+ "age": 35,
+ "emailAddress": "gilby@Gmail.com",
+ "address": {
+ "streetAddress": "Embassy Manor",
+ "city": "Dublin",
+ "postCode": "D14 AH39",
+ "state": "Dublin",
+ "country": "Ireland",
+ "county": "D"
+ },
+ "phoneNumber": {
+ "home": "012345678",
+ "mob": "0987654321"
+ }
+ }
+]
